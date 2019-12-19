@@ -17,12 +17,12 @@ resource "aws_iam_role" "lambda_exec" {
     EOF
 }
 
-resource "aws_lambda_function" "serverless_klarna" {
+resource "aws_lambda_function" "serverless" {
 
   for_each = var.deployments 
 
   filename      = each.value
-  function_name = "KlarnaServerless${each.value}"
+  function_name = "Serverless${each.value}"
   role          = aws_iam_role.lambda_exec.arn
   handler       = "app.handler"
 
