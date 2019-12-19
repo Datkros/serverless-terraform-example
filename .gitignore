@@ -125,5 +125,9 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Terraform
+.terraform/
+
+
 # Pyre type checker
 .pyre/
